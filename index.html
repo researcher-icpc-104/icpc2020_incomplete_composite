@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>How Does Incomplete Composite Refactoring Affect Internal Quality Attributes?</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('body').scrollspy({
+			target : '#mainNavBar'
+		})
+	});
+</script>
+
+</head>
+<body>
+
+	<nav id="mainNavBar" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">ICPC 2020</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#abstract">Abstract <span
+							class="sr-only">(current)</span></a></li>
+
+					<li><a href="#downloads">Downloads</a></li>
+					<li><a href="#authors">Authors</a></li>
+					<!--<li><a href="#references">References</a></li>-->
+
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+
+	<div class="container container-gral">
+
+		<div class="page-title">
+			<h1>
+				How Does Incomplete Composite Refactoring Affect Internal Quality Attributes? <br>
+			</h1>
+		</div>
+		<br>
+		<p class="text-justify">
+			This website contains complementary data to the	paper.
+		</p>
+
+		<h3 id="abstract" class="page-header">Abstract</h3>
+		<p class="text-justify">Program refactoring is the process of applying code changes aimed at improving the internal code structure of a software project.
+			Recent studies presented that developers often perform composite refactorings, which are set of two or more interrelated single refactorings.
+			Previous studies recommended some composite refactorings to remove poor code structures, i.e, code smells, thus improving the program comprehension.
+			Recent studies presented that composite refactorings often failed to remove the code smells.
+			These are incomplete composite refactorings, i.e, composites that do not have one or more single refactorings recommended to fully remove a particular smell.
+			However, those previous studies did not provide an in-depth analysis of incomplete composites. 
+			In particular, those studies do not characterize the most common incomplete composites applied to real programs, and how incomplete composite refactorings could be improving the program comprehension
+gradually, affecting internal quality attributes. This paper investigated the most common incomplete composites, and the effect of incomplete composite refactorings on quality attributes, regarding the program comprehension.
+			We analyzed 353 incomplete composite refactorings in 5 software projects, two common code smells (Feature Envy and God Class), and four internal quality attributes.
+Our results reveal that incomplete composite refactorings with at least one Extract Method are often (71%) applied without Move Methods on smelly classes.
+			This result suggests that the code smells are not removed and the program comprehension is not improved significantly because of the lack of Move Methods.
+			We also have found that most incomplete composite refactorings tended to not change the internal state of the code on smelly classes. This result revealed that, despite the fact that incomplete composite refactorings did not remove the code smells, they remained the structural internal quality of the classes and the program comprehension.
+			These results suggest that the existing refactoring tools also should evaluate if the incomplete composite refactorings are keeping the internal structure quality, while the code smells are not removed.</p>
+
+
+		<h3 id="downloads" class="page-header">Downloads</h3>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Artifact</th>
+					<th>Description</th>
+				</tr>				
+
+				<tr>
+					<th scope="row">1</th>
+					<td width="20%"><a href="download/composite-refactorings/couchbase-java-client-composites.json"
+						target="_blank"> File Name </a></td>
+					<td>This file contains the composite refactorings for Couchbase Java Client project.
+				</tr>
+				
+				<tr>
+					<th scope="row">2</th>
+					<td width="20%"><a href="download/composite-refactorings/dubbo-composites.json"
+						target="_blank"> File Name </a></td>
+					<td>This file contains the composite refactorings for Dubbo project.
+				</tr>
+				
+				<tr>
+					<th scope="row">3</th>
+					<td width="20%"><a href="download/composite-refactorings/fresco-composites.json"
+						target="_blank"> File Name </a></td>
+					<td>This file contains the composite refactorings for Fresco project.
+				</tr>
+				
+				<tr>
+					<th scope="row">4</th>
+					<td width="20%"><a href="download/composite-refactorings/jgit-composites.json"
+						target="_blank"> File Name </a></td>
+					<td>This file contains the composite refactorings for JGit project.
+				</tr>
+				
+				<tr>
+					<th scope="row">5</th>
+					<td width="20%"><a href="download/composite-refactorings/okhttp-composites.json"
+						target="_blank"> File Name </a></td>
+					<td>This file contains the composite refactorings for OkHttp project.
+				</tr>
+				
+				<tr>
+					<th scope="row">6</th>
+					<td><a href="download/composite-incomplete-composites/incomplete-composite-couchbase-java-client.json" target="_blank">
+					File Name </a></td>
+					<td>This file contains the incomplete composites for Couchbase Java Client project.
+				</tr>
+				
+				<tr>
+					<th scope="row">7</th>
+					<td><a href="download/composite-incomplete-composites/incomplete-composite-dubbo.json" target="_blank">
+					File Name </a></td>
+					<td>This file contains the incomplete composites for Dubbo project.
+				</tr>
+				
+				<tr>
+					<th scope="row">8</th>
+					<td><a href="download/composite-incomplete-composites/incomplete-composite-fresco.json" target="_blank">
+					File Name </a></td>
+					<td>This file contains the incomplete composites for Fresco project.
+				</tr>
+				
+				<tr>
+					<th scope="row">9</th>
+					<td><a href="download/composite-incomplete-composites/incomplete-composite-jgit.json" target="_blank">
+					File Name </a></td>
+					<td>This file contains the incomplete composites for JGit project.
+				</tr>
+				
+				<tr>
+					<th scope="row">10</th>
+					<td><a href="download/composite-incomplete-composites/incomplete-composite-okhttp.rar" target="_blank">
+					File Name </a></td>
+					<td>This file contains the incomplete composites for OkHttp project.
+				</tr>
+
+				<tr>
+					<th scope="row">11</th>
+					<td><a href="download/internal-quality-attribute-quartiles/internal-quality-attribute-quartiles-couchbase-java-client.zip" target="_blank">
+					File Name </a></td>
+					<td>This file contains internal quality attribute quartiles for Couchbase Java Client project.
+				</tr>
+				
+				<tr>
+					<th scope="row">12</th>
+					<td><a href="download/internal-quality-attribute-quartiles/internal-quality-attribute-quartiles-dubbo.zip" target="_blank">
+					File Name </a></td>
+					<td>This file contains internal quality attribute quartiles for Dubbo project.
+				</tr>
+				
+				<tr>
+					<th scope="row">13</th>
+					<td><a href="download/internal-quality-attribute-quartiles/internal-quality-attribute-quartiles-fresco.zip" target="_blank">
+					File Name </a></td>
+					<td>This file contains internal quality attribute quartiles for Fresco project.
+				</tr>
+				
+				<tr>
+					<th scope="row">14</th>
+					<td><a href="download/internal-quality-attribute-quartiles/internal-quality-attribute-quartiles-jgit.rar" target="_blank">
+					File Name </a></td>
+					<td>This file contains internal quality attribute quartiles for JGit project.
+				</tr>
+				
+				<tr>
+					<th scope="row">15</th>
+					<td><a href="download/internal-quality-attribute-quartiles/internal-quality-attribute-quartiles-okhttp.zip" target="_blank">
+					File Name </a></td>
+					<td>This file contains internal quality attribute quartiles for OkHttp project.
+				</tr>
+				
+				
+				<tr>
+					<th scope="row">16</th>
+					<td><a href="download/possible-incomplete-composites/possible-incomplete-composite-couchbase-java-client.json" target="_blank">
+					File Name </a></td>
+					<td>Composites that have at least one Extract Method and one Move Method for Couchbase Java Client project
+				</tr>
+				
+				<tr>
+					<th scope="row">17</th>
+					<td><a href="download/possible-incomplete-composites/possible-incomplete-composite-dubbo.json" target="_blank">
+					File Name </a></td>
+					<td>Composites that have at least one Extract Method and one Move Method for Dubbo project
+				</tr>
+				
+				<tr>
+					<th scope="row">18</th>
+					<td><a href="download/possible-incomplete-composites/possible-incomplete-composite-fresco.json" target="_blank">
+					File Name </a></td>
+					<td>Composites that have at least one Extract Method and one Move Method for Fresco project
+				</tr>
+				
+				<tr>
+					<th scope="row">19</th>
+					<td><a href="download/possible-incomplete-composites/possible-incomplete-composite-jgit.json" target="_blank">
+					File Name </a></td>
+					<td>Composites that have at least one Extract Method and one Move Method for JGit project
+				</tr>
+				
+				<tr>
+					<th scope="row">20</th>
+					<td><a href="download/possible-incomplete-composites/possible-incomplete-composite-okhttp.json" target="_blank">
+					File Name </a></td>
+					<td>Composites that have at least one Extract Method and one Move Method for OkHttp project
+				</tr>
+				
+			
+				<tr>
+					<th scope="row">21</th>
+					<td><a href="download/incomplete-composites-by-groups.xlsx" target="_blank">
+					Incomplete Composites by groups </a></td>
+					<td>This file contains the Incomplete Composites dovided by groups.
+				</tr>
+				
+				<tr>
+					<th scope="row">22</th>
+					<td><a href="download/most-common-incomplete-composite.xlsx" target="_blank">
+					Most Common Incomplete Composite </a></td>
+					<td>This file contains the most common Incomplete Composites.
+				</tr>
+
+
+
+				
+			</thead>
+			<tbody>
+
+			
+
+			</tbody>
+		</table>
+
+		<h3 class="page-header" id="authors">Authors</h3>
+
+		<p>Any questions and/or suggestions should be sent to the paper
+			authors as follows.</p>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>E-mail</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td></td>
+					<td></td>
+				</tr>
+
+			</tbody>
+		</table>
+
+</body>
+</html>
+
